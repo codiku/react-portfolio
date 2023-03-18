@@ -3,14 +3,19 @@ import developerImg from "assets/images/human.png";
 import { SkillBadges } from "./SkillBadges";
 export function LandingPresentation() {
   const mainText = (
-    <Box>
-      <Heading fontSize={"7xl"} color={"secondary"}>
+    <>
+      <Heading fontSize={{ base: "5xl", lg: "7xl" }} color={"secondary"}>
         Hi, my <br /> name is Codiku
-        <Text fontSize={"7xl"} as={"span"} pl={2} color="primary.strong">
+        <Text
+          fontSize={{ base: "5xl", lg: "7xl" }}
+          as={"span"}
+          pl={2}
+          color="primary.strong"
+        >
           .
         </Text>
       </Heading>
-      <Text fontSize={"3xl"} as={"span"} color="secondary">
+      <Text fontSize={{ base: "xl", lg: "3xl" }} as={"span"} color="secondary">
         I'm an independent{" "}
         <Text as={"span"} fontWeight="bold">
           developer / Instructor
@@ -18,21 +23,21 @@ export function LandingPresentation() {
         <br />
         from France, Paris
       </Text>
-    </Box>
+    </>
   );
 
-  const image = <Image src={developerImg} w={400} />;
   return (
     <Flex
-      justifyContent={"space-between"}
-      alignItems={"center"}
-      direction={{ base: "column", xl: "row" }}
+      direction={{ base: "column", lg: "row" }}
+      width="100%"
+      justifyContent={"space-evenly"}
+      alignItems="center"
     >
       <Box>
         {mainText}
         <SkillBadges />
       </Box>
-      <Box>{image}</Box>
+      <Image src={developerImg} w={[400]} />
     </Flex>
   );
 }

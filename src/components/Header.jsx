@@ -12,7 +12,7 @@ import bubbleImg from "assets/images/bubble.png";
 import flagEnImg from "assets/images/flag-en.png";
 export function Header() {
   return (
-    <Flex justify={"space-between"}>
+    <Flex justify={"space-between"} width={"100%"}>
       <Image src={logoImg} h={10} />
       <Box>
         <HStack>

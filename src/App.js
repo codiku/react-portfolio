@@ -3,13 +3,14 @@ import { Header } from "components/Header";
 import { LandingPresentation } from "components/LandingPresentation";
 
 export default function App() {
-  return <Flex direction="column" p={10}  >
-    <Box flex={1}>
+  return <Flex direction="column" p={10} minH="100vh" >
+    <Flex flex={1}  >
       <Header />
-    </Box>
-    <Box mt={100} flex={5} pl={{ base: 0, xl: 250 }}
-      pr={{ base: 0, xl: 250 }}>
-      <LandingPresentation />
-    </Box>
+    </Flex>
+    <Flex flex={6} >
+      <Flex width={"100%"} alignItems="center">
+        <LandingPresentation />
+      </Flex>
+    </Flex>
   </Flex >
 }
