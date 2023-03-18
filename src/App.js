@@ -1,6 +1,6 @@
-import { Box, Container, Heading, HStack, Text, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { Header } from "components/Header";
-import { LandingPresentation } from "components/LandingPresentation";
+import { Body } from "components/Body";
 
 export default function App() {
   return <Flex direction="column" p={10} minH="100vh" >
@@ -9,7 +9,7 @@ export default function App() {
     </Flex>
     <Flex flex={6} >
       <Flex width={"100%"} alignItems="center">
-        <LandingPresentation />
+        <Body />
       </Flex>
     </Flex>
   </Flex >

@@ -1,6 +1,6 @@
 import "@fontsource/inter"
 import "@fontsource/poppins"
-
+import "locales/i18next"
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

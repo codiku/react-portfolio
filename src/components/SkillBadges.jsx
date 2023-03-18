@@ -1,13 +1,4 @@
-import {
-  Badge,
-  Box,
-  Center,
-  HStack,
-  SimpleGrid,
-  Text,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Text, Wrap, WrapItem } from "@chakra-ui/react";
 
 export function SkillBadges({ children }) {
   const badge = (text, bg) => {
