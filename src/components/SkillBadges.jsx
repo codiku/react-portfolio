@@ -16,7 +16,7 @@ export function SkillBadges({ children }) {
     );
   };
   return (
-    <HStack>
+    <HStack mt={30} mb={30}>
       {badge("React.JS")}
       {badge("Redux", "black")}
       {badge("Typescript", "secondary")}

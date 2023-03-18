@@ -11,9 +11,7 @@ export default function App() {
     <Box mt={100} flex={5} pl={{ base: 0, xl: 250 }}
       pr={{ base: 0, xl: 250 }}>
       <LandingPresentation />
-      <HStack minHeight={100} justifyContent={{ base: "center", xl: "flex-start" }}>
-        <SkillBadges />
-      </HStack>
     </Box>
   </Flex >
 }
+// href={`mailto:${email}?subject=${subject || ""}&body=${body || ""}`}

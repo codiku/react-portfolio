@@ -8,6 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import developerImg from "assets/images/human.png";
+import { SkillBadges } from "./SkillBadges";
 export function LandingPresentation() {
   const mainText = (
     <Box>
@@ -35,7 +36,10 @@ export function LandingPresentation() {
       alignItems={"center"}
       direction={{ base: "column", xl: "row" }}
     >
-      <Box>{mainText}</Box>
+      <Box>
+        {mainText}
+        <SkillBadges />
+      </Box>
       <Box>{image}</Box>
     </Flex>
   );
