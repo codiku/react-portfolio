@@ -1,7 +1,6 @@
 import { Box, Container, Heading, HStack, Text, Flex } from "@chakra-ui/react";
 import { Header } from "components/Header";
 import { LandingPresentation } from "components/LandingPresentation";
-import { SkillBadges } from "components/SkillBadges";
 
 export default function App() {
   return <Flex direction="column" p={10}  >
@@ -14,4 +13,3 @@ export default function App() {
     </Box>
   </Flex >
 }
-// href={`mailto:${email}?subject=${subject || ""}&body=${body || ""}`}
