@@ -1,13 +1,19 @@
-import { Box, Heading, HStack, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, HStack, Text, Flex } from "@chakra-ui/react";
+import { Header } from "components/Header";
+import { LandingPresentation } from "components/LandingPresentation";
+import { SkillBadges } from "components/SkillBadges";
 
 export default function App() {
-  return <>
-    <Heading size="3xl">This is a title using poppins font</Heading>
-    <Text>This is a text using inter font</Text>
-    <HStack spacing={0}>
-      <Box h={100} w={100} bg="primary.strong" />
-      <Box h={100} w={100} bg="primary.light" />
-      <Box h={100} w={100} bg="secondary" />
-    </HStack>
-  </>
+  return <Flex direction="column" p={10}  >
+    <Box flex={1}>
+      <Header />
+    </Box>
+    <Box mt={100} flex={5} pl={{ base: 0, xl: 250 }}
+      pr={{ base: 0, xl: 250 }}>
+      <LandingPresentation />
+      <HStack minHeight={100} justifyContent={{ base: "center", xl: "flex-start" }}>
+        <SkillBadges />
+      </HStack>
+    </Box>
+  </Flex >
 }

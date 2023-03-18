@@ -6,7 +6,6 @@ const colors = {
         light: "#FFCD69"
     },
     secondary: '#0F1B61',
-    grey: '#rgba(124, 124, 124, 0.76)',
     black: "#000000"
 }
 
