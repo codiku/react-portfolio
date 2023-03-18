@@ -33,7 +33,7 @@ export function LandingPresentation() {
       justifyContent={"space-evenly"}
       alignItems="center"
     >
-      <Box>
+      <Box mt={{ base: 50, lg: -200 }}>
         {mainText}
         <SkillBadges />
       </Box>
