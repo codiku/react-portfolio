@@ -1,7 +1,7 @@
 import { Badge, Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import developerImg from "assets/images/human.png";
 import { useTranslation } from "react-i18next";
-import { SkillBadges } from "./SkillBadges";
+import { SkillBadges } from "../components/SkillBadges";
 
 export function Body() {
   const { t } = useTranslation("home");

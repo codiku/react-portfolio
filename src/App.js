@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
-import { Header } from "components/Header";
-import { Body } from "components/Body";
+import { Header } from "features/Header";
+import { Body } from "features/Body";
 
 export default function App() {
   return (
