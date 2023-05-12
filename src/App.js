@@ -1,18 +1,25 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { Header } from "features/Header";
-import { Body } from "features/Body";
-
+import { Introduction } from "features/Introduction";
+import { LatestProjects } from "features/LatestProject";
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+const queryClient = new QueryClient();
 export default function App() {
   return (
-    <Flex direction="column" p={10} h="100%">
-      <Flex flex={1}>
+    <QueryClientProvider client={queryClient}>
+      <Box p={10}>
         <Header />
-      </Flex>
-      <Flex flex={6}>
-        <Flex width={"100%"} alignItems="center">
-          <Body />
-        </Flex>
-      </Flex>
-    </Flex>
+        <Box ml={{ base: 0, lg: 40 }} mr={{ base: 0, lg: 40 }} mt={150}>
+          <Introduction />
+          <LatestProjects />
+        </Box>
+      </Box>
+    </QueryClientProvider>
   );
 }

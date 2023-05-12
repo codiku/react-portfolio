@@ -1,9 +1,10 @@
 import { Badge, Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import developerImg from "assets/images/human.png";
 import { useTranslation } from "react-i18next";
-import { SkillBadges } from "../components/SkillBadges";
+import { SkillBadges } from "./SkillBadges";
+import { badgeColors } from "styles/badgeColor";
 
-export function Body() {
+export function Introduction() {
   const { t } = useTranslation("home");
   const mainText = (
     <>
@@ -32,12 +33,19 @@ export function Body() {
     <Flex
       direction={{ base: "column", lg: "row" }}
       width="100%"
-      justifyContent={"space-evenly"}
+      justifyContent={"space-between"}
       alignItems="center"
     >
       <Box mt={{ base: 50, lg: -200 }}>
         {mainText}
-        <SkillBadges />
+        <SkillBadges
+          skills={[
+            { label: "React", bg: badgeColors["React"] },
+            { label: "Redux", bg: badgeColors["Redux"] },
+            { label: "Typescript", bg: badgeColors["Typescript"] },
+            { label: "Node.JS", bg: badgeColors["Node.JS"] },
+          ]}
+        />
       </Box>
       <Flex direction={"column"}>
         <Badge
