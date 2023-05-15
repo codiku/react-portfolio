@@ -8,7 +8,9 @@ export default function App() {
   return (
     <Box p={20}>
       <Header />
-      <Landing />
+      <Box mb={60}>
+        <Landing />
+      </Box>
       <LatestProjects />
     </Box>
   );

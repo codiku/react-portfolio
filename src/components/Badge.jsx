@@ -1,18 +1,18 @@
-const { WrapItem, Text } = require("@chakra-ui/react");
+const { WrapItem, Text, Heading } = require("@chakra-ui/react");
 
 export const Badge = ({ children, bg }) => {
   return (
-    <WrapItem>
-      <Text
-        w={100}
+    <WrapItem flex justifyContent={"center"} alignItems={"center"}>
+      <Heading
+        size={"sm"}
         bg={bg || "primary.strong"}
         color="white"
-        borderRadius={5}
-        padding={"3px 5px 3px 5px"}
+        borderRadius={3}
+        padding={"10px 30px 10px 30px"}
         textAlign="center"
       >
         {children}
-      </Text>
+      </Heading>
     </WrapItem>
   );
 };

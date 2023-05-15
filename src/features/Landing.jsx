@@ -8,15 +8,21 @@ export function Landing() {
   const { t } = useTranslation("home");
   const mainText = (
     <>
-      <Heading fontSize={{ base: "5xl", lg: "7xl" }} color={"secondary"}>
-        {t("introducingName")}
-        <Text
-          fontSize={{ base: "5xl", lg: "7xl" }}
-          as={"span"}
-          pl={2}
-          color="primary.strong"
-        >
-          .
+      <Heading
+        whiteSpace={"pre-line"}
+        fontSize={{ base: "5xl", lg: "7xl" }}
+        color={"secondary"}
+      >
+        <Text>
+          {t("introducingName")}
+          <Text
+            fontSize={{ base: "5xl", lg: "7xl" }}
+            as={"span"}
+            pl={2}
+            color="primary.strong"
+          >
+            .
+          </Text>
         </Text>
       </Heading>
       <Text fontSize={{ base: "xl", lg: "3xl" }} as={"span"} color="secondary">
@@ -24,7 +30,7 @@ export function Landing() {
         <Text as={"span"} fontWeight="bold">
           {t("job")}
         </Text>
-        {t("location")}
+        <Text>{t("location")}</Text>
       </Text>
     </>
   );
@@ -32,7 +38,7 @@ export function Landing() {
   const leftSection = (
     <>
       {mainText}
-      <Box mt={5}>
+      <Box mt={"32"}>
         <SkillBadges
           skills={[
             { label: "React", bg: badgeColors["React"] },
