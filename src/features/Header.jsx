@@ -12,7 +12,7 @@ export function Header() {
     i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
   return (
-    <Flex justify={"space-between"} width={"100%"}>
+    <Flex justify={"space-between"}>
       <Image src={logoImg} h={10} />
       <Box>
         <HStack>

@@ -5,6 +5,8 @@
     "job":"developpeur / Instructeur\n",
     "location": "en France, Paris",
     "yearOfExp": "{{years}}+\n",
-    "experience":"années d'experience"
+    "experience":"années d'experience",
+    "latestProjects":"Projets récents"
+
 
 }

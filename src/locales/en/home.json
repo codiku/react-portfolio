@@ -5,5 +5,6 @@
     "job":"developer / Instructor\n",
     "location": "from France, Paris",
     "yearOfExp": "{{years}}+\n",
-    "experience":"years of experience"
+    "experience":"years of experience",
+    "latestProjects":"Latest projects"
 }
