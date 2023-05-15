@@ -1,6 +1,5 @@
 import { collection, getDocs, query } from "firebase/firestore";
 import { FirebaseApp } from "utils/firebase";
-import { ref, getDownloadURL } from "firebase/storage";
 
 export class ProjectsAPI {
   static async fetchAll() {
