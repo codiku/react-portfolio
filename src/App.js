@@ -7,13 +7,15 @@ import { FirebaseApp } from "utils/firebase";
 FirebaseApp.init();
 export default function App() {
   return (
-    <Box p={20}>
-      <Header />
-      <Box mb={60}>
-        <Landing />
+    <>
+      <Box p={20}>
+        <Header />
+        <Box mb={60}>
+          <Landing />
+        </Box>
+        <LatestProjects />
       </Box>
-      <LatestProjects />
       <Footer />
-    </Box>
+    </>
   );
 }
