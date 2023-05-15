@@ -5,7 +5,9 @@ export function SkillBadges({ skills }) {
   return (
     <Wrap>
       {skills.map((skill) => (
-        <Badge bg={skill?.bg}>{skill.label}</Badge>
+        <Badge key={skill.label} bg={skill?.bg}>
+          {skill.label}
+        </Badge>
       ))}
     </Wrap>
   );

@@ -8,9 +8,11 @@ import { useTranslation } from "react-i18next";
 export function LatestProjects() {
   const { t } = useTranslation("home");
   const [projects, setProjects] = useState([]);
+
   useEffect(() => {
     (async () => {
-      setProjects(await ProjectsAPI.fetchAll());
+      const projectsResp = await ProjectsAPI.fetchAll();
+      setProjects(projectsResp);
     })();
   }, []);
 
@@ -18,10 +20,7 @@ export function LatestProjects() {
     return (
       <WrapItem key={project.id}>
         <Box>
-          <Image
-            w={350}
-            src={`${process.env.REACT_APP_API_BASE_URL}${project.attributes.images.data.attributes.url}`}
-          />
+          <Image w={350} src={project.image[0].downloadURL} />
           <Heading size="md" color="secondary" mt={1} minH={50}>
             <Box
               display={"inline-block"}
@@ -31,14 +30,14 @@ export function LatestProjects() {
               w={25}
               h={1}
             />
-            {project.attributes.title}
+            {project.title}
           </Heading>
           <Box maxW={350}>
             <SkillBadges
-              skills={project.attributes.technologies.map((tech) => {
+              skills={project.technologies.map((technologie) => {
                 return {
-                  label: tech.technologie,
-                  bg: badgeColors[tech.technologie],
+                  label: technologie,
+                  bg: badgeColors[technologie],
                 };
               })}
             />
@@ -58,29 +57,3 @@ export function LatestProjects() {
     </Flex>
   );
 }
-
-/*
-
- <Heading size="md" color="secondary" mt={1} minH={50}>
-          <Box
-            display={"inline-block"}
-            verticalAlign="middle"
-            mr={3}
-            bg="primary.strong"
-            w={25}
-            h={1}
-          />
-          {project.attributes.title}
-        </Heading>
-        <Box maxW={350}>
-          <SkillBadges
-            skills={project.attributes.technologies.map((tech) => {
-              return {
-                label: tech.technologie,
-                bg: badgeColors[tech.technologie],
-              };
-            })}
-          />
-        </Box>
-
-        */

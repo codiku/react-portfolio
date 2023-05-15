@@ -1,11 +1,19 @@
-import axios from "axios";
+import { collection, getDocs, query } from "firebase/firestore";
+import { FirebaseApp } from "utils/firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 export class ProjectsAPI {
   static async fetchAll() {
-    return (
-      await axios.get(
-        `${process.env.REACT_APP_API_BASE_URL}/api/dev-projects?populate=*`
-      )
-    ).data.data;
+    const response = await getDocs(
+      query(collection(FirebaseApp.db, "projects"))
+    );
+    return Promise.all(
+      response.docs.map(async (document) => {
+        return {
+          id: document.id,
+          ...document.data(),
+        };
+      })
+    );
   }
 }

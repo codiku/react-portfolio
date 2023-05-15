@@ -9,4 +9,5 @@ export const badgeColors = {
   Bootstrap: "#9038f4",
   Firebase: "#feba54",
   Vercel: "grey",
+  ChakraUI: "#31b03e",
 };
