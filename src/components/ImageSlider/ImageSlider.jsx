@@ -6,26 +6,21 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  Flex,
   Box,
 } from "@chakra-ui/react";
+
 export const ImageSlider = ({ imgList }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderModalRef = useRef();
 
-  const openImg = (img, i) => {
-    console.log("*** SET CURRENT INDEX", i);
-    setCurrentIndex((index) => i);
+  const openImg = (i) => {
+    setCurrentIndex(i);
     onOpen();
   };
-
-  console.log("CURRENT INDEX POUR ", imgList, " est ", currentIndex);
 
   return (
     <>
@@ -41,7 +36,7 @@ export const ImageSlider = ({ imgList }) => {
             return (
               <Box
                 borderRadius={"xl"}
-                onClick={() => openImg(img, i)}
+                onClick={() => openImg(i)}
                 key={img}
                 style={{
                   backgroundSize: "cover",
@@ -87,7 +82,7 @@ export const ImageSlider = ({ imgList }) => {
                 {imgList.map((img, i) => {
                   return (
                     <Box
-                      onClick={() => openImg(img, i)}
+                      onClick={() => openImg(i)}
                       key={img}
                       height={{ base: 300, md: 650 }}
                       style={{
