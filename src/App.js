@@ -8,10 +8,8 @@ export default function App() {
   return (
     <Box p={20}>
       <Header />
-      <Box>
-        <Landing />
-        <LatestProjects />
-      </Box>
+      <Landing />
+      <LatestProjects />
     </Box>
   );
 }
