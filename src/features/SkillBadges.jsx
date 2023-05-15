@@ -3,7 +3,7 @@ import { Badge } from "components/Badge";
 
 export function SkillBadges({ skills }) {
   return (
-    <Wrap mt={30} mb={30}>
+    <Wrap>
       {skills.map((skill) => (
         <Badge bg={skill?.bg}>{skill.label}</Badge>
       ))}

@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import { ProjectsAPI } from "api/projects";
 import { SkillBadges } from "./SkillBadges";
@@ -14,7 +14,7 @@ export function LatestProjects({}) {
           w={350}
           src={`${process.env.REACT_APP_API_BASE_URL}${project.attributes.images.data.attributes.url}`}
         />
-        <Heading size="md" color="secondary" mt={3} minH={50}>
+        <Heading size="md" color="secondary" mt={1} minH={50}>
           <Box
             display={"inline-block"}
             verticalAlign="middle"

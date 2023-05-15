@@ -38,14 +38,16 @@ export function Introduction() {
     >
       <Box mt={{ base: 50, lg: -200 }}>
         {mainText}
-        <SkillBadges
-          skills={[
-            { label: "React", bg: badgeColors["React"] },
-            { label: "Redux", bg: badgeColors["Redux"] },
-            { label: "Typescript", bg: badgeColors["Typescript"] },
-            { label: "Node.JS", bg: badgeColors["Node.JS"] },
-          ]}
-        />
+        <Box mt={5}>
+          <SkillBadges
+            skills={[
+              { label: "React", bg: badgeColors["React"] },
+              { label: "Redux", bg: badgeColors["Redux"] },
+              { label: "Typescript", bg: badgeColors["Typescript"] },
+              { label: "Node.JS", bg: badgeColors["Node.JS"] },
+            ]}
+          />
+        </Box>
       </Box>
       <Flex direction={"column"}>
         <Badge
