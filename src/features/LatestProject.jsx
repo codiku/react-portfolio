@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Image, Wrap, WrapItem } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import { ProjectsAPI } from "api/projects";
 import { SkillBadges } from "./SkillBadges";
 import { badgeColors } from "styles/badgeColor";
@@ -20,8 +28,9 @@ export function LatestProjects() {
     return (
       <WrapItem key={project.id}>
         <Box>
-          <Image w={350} src={project.image[0].downloadURL} />
-          <Heading size="md" color="secondary" mt={1} minH={50}>
+          <Image w={350} h={220} src={project.image[0].downloadURL} />
+
+          <Heading size="md" color="secondary" mt={1}>
             <Box
               display={"inline-block"}
               verticalAlign="middle"
@@ -32,7 +41,8 @@ export function LatestProjects() {
             />
             {project.title}
           </Heading>
-          <Box maxW={350}>
+          <Text>{project.type}</Text>
+          <Box mt={5} maxW={350}>
             <SkillBadges
               skills={project.technologies.map((technologie) => {
                 return {
@@ -51,7 +61,7 @@ export function LatestProjects() {
       <Heading color={"secondary"} size="2xl">
         {t("latestProjects")}
       </Heading>
-      <Wrap mt={10} spacing={20} justify="space-between">
+      <Wrap mt={10} spacing={16}>
         {projects?.map(renderProject)}
       </Wrap>
     </Flex>

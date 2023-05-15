@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import { Footer } from "features/Footer";
 import { Header } from "features/Header";
 import { Landing } from "features/Landing";
 import { LatestProjects } from "features/LatestProject";
@@ -12,6 +13,7 @@ export default function App() {
         <Landing />
       </Box>
       <LatestProjects />
+      <Footer />
     </Box>
   );
 }
