@@ -1,4 +1,4 @@
-import { Flex, HStack, Link } from "@chakra-ui/react";
+import { HStack, Link } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 
@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <HStack justify="center" h={130} bg={"secondary"}>
       <Link href="https://twitter.com" isExternal>
-        <Icon as="link" w={8} h={8} color="#03A9F4" as={BsTwitter} />
+        <Icon w={8} h={8} color="#03A9F4" as={BsTwitter} />
       </Link>
       <Link href="https://linkedin.com" isExternal>
         <Icon

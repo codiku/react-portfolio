@@ -1,4 +1,4 @@
-const { WrapItem, Text, Heading } = require("@chakra-ui/react");
+const { WrapItem, Heading } = require("@chakra-ui/react");
 
 export const Badge = ({ children, bg }) => {
   return (

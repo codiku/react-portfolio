@@ -12,11 +12,11 @@ import { SkillBadges } from "./SkillBadges";
 import { badgeColors } from "styles/badgeColor";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ImageSlider } from "components/ImageSlider/ImageSlider";
 
 export function LatestProjects() {
   const { t } = useTranslation("home");
   const [projects, setProjects] = useState([]);
-
   useEffect(() => {
     (async () => {
       const projectsResp = await ProjectsAPI.fetchAll();
@@ -28,8 +28,7 @@ export function LatestProjects() {
     return (
       <WrapItem key={project.id}>
         <Box>
-          <Image w={350} h={220} src={project.image[0].downloadURL} />
-
+          <ImageSlider imgList={project.image.map((img) => img.downloadURL)} />
           <Heading size="md" color="secondary" mt={1}>
             <Box
               display={"inline-block"}
@@ -56,6 +55,7 @@ export function LatestProjects() {
       </WrapItem>
     );
   };
+
   return (
     <Flex direction={"column"} w="100%">
       <Heading color={"secondary"} size="2xl">
