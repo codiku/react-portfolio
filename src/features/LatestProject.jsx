@@ -29,7 +29,7 @@ export function LatestProjects() {
       <WrapItem key={project.id}>
         <Box>
           <ImageSlider imgList={project.image.map((img) => img.downloadURL)} />
-          <Heading size="md" color="secondary" mt={1}>
+          <Heading size="md" color="secondary" mt={3}>
             <Box
               display={"inline-block"}
               verticalAlign="middle"
