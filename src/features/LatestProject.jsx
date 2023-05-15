@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import { ProjectsAPI } from "api/projects";
 import { SkillBadges } from "./SkillBadges";
 import { badgeColors } from "styles/badgeColor";
