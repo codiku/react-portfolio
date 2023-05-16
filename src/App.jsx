@@ -1,10 +1,10 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { Header } from "@/features/Header";
 
 export function App() {
   return (
-    <>
-      <Heading color="secondary">Title</Heading>
-      <Text>text</Text>
-    </>
+    <Box p={20}>
+      <Header />
+    </Box>
   );
 }
