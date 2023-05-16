@@ -1,8 +1,8 @@
 import { Box, Flex, HStack, Image, Link } from "@chakra-ui/react";
-import logoImg from "assets/images/logo.png";
-import bubbleImg from "assets/images/bubble.png";
-import flagEnImg from "assets/images/flag-en.png";
-import flagFrImg from "assets/images/flag-fr.png";
+import logoImg from "@/assets/images/logo.png";
+import bubbleImg from "@/assets/images/bubble.png";
+import flagEnImg from "@/assets/images/flag-en.png";
+import flagFrImg from "@/assets/images/flag-fr.png";
 
 import { useTranslation } from "react-i18next";
 export function Header() {

@@ -1,5 +1,5 @@
 import { collection, getDocs, query } from "firebase/firestore";
-import { FirebaseApp } from "utils/firebase";
+import { FirebaseApp } from "@/utils/firebase";
 
 export class ProjectsAPI {
   static async fetchAll() {

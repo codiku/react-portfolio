@@ -1,8 +1,8 @@
 import { Badge, Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import developerImg from "assets/images/human.png";
+import developerImg from "@/assets/images/human.png";
 import { useTranslation } from "react-i18next";
-import { SkillBadges } from "./SkillBadges";
-import { badgeColors } from "styles/badgeColor";
+import { SkillBadges } from "@/features/SkillBadges";
+import { badgeColors } from "@/styles/badgeColor";
 
 export function Landing() {
   const { t } = useTranslation("home");
