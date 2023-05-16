@@ -1,15 +1,4 @@
-import "@fontsource/inter";
-import "@fontsource/poppins";
-import "@/locales/i18next";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import { ChakraProvider } from "@chakra-ui/react";
-import { myTheme } from "@/styles/theme";
+import { App } from "./App.jsx";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <ChakraProvider theme={myTheme}>
-    <App />
-  </ChakraProvider>
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
