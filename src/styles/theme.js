@@ -8,4 +8,9 @@ const colors = {
   secondary: "#0F1B61",
   black: "#000000",
 };
-export const myTheme = extendTheme({ colors });
+
+const fonts = {
+  heading: `'Poppins', sans-serif`,
+  body: `'Inter', sans-serif`,
+};
+export const myTheme = extendTheme({ colors, fonts });
