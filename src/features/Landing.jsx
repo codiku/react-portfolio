@@ -14,24 +14,25 @@ export function Landing() {
   const mainText = (
     <>
       <Heading
-        whiteSpace={"pre-line"}
-        fontSize={{ base: "5xl", lg: "7xl" }}
+        fontSize={{ base: "2xl", md: "4xl", xl: "7xl" }}
         color={"secondary"}
       >
+        Hi, My name
         <Text>
-          My name is Codiku
+          is Codiku
           <Box as="span" color="primary.dark">
             .
           </Box>
         </Text>
       </Heading>
-      <Text fontSize={{ base: "xl", lg: "3xl" }} as={"span"} color="secondary">
+      <Text fontSize={"lg"} as={"span"} color="secondary">
         I am
         <Text as={"span"} fontWeight="bold">
           {" "}
           a freelance developer/instructor
         </Text>
-        <Text>located in Paris / France</Text>
+        <br />
+        located in Paris / France
       </Text>
     </>
   );
@@ -64,9 +65,13 @@ export function Landing() {
     </>
   );
   return (
-    <Wrap justify={"space-evenly"} mt={{ base: 10, md: 150 }}>
-      <WrapItem>{leftSection}</WrapItem>
-      <WrapItem>{rightSection}</WrapItem>
-    </Wrap>
+    <Flex
+      direction={{ base: "column", md: "row" }}
+      justify={"space-evenly"}
+      mt={{ base: 50, md: 150 }}
+    >
+      {leftSection}
+      <Box mt={{ base: 10, md: 0 }}>{rightSection}</Box>
+    </Flex>
   );
 }
