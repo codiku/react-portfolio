@@ -18,7 +18,7 @@ export function Landing() {
       <Text fontSize="lg" color="secondary">
         {t("iAm")}
         <Text as="span" fontWeight="bold">
-          {t("job")}
+          {" " + t("job")}
         </Text>
         <br /> {t("location")}
       </Text>
