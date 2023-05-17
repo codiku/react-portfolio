@@ -1,12 +1,4 @@
-import {
-  Badge,
-  Box,
-  Flex,
-  HStack,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Badge, Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import humanImg from "@/assets/images/human.png";
 export function Landing() {
   const leftSection = (
@@ -31,26 +23,16 @@ export function Landing() {
   );
 
   const badgeExperience = (
-    <Badge
-      textAlign={"center"}
-      alignSelf="flex-start"
-      color="white"
-      bg="primary.light"
-      borderRadius={7}
-      p={3}
-    >
-      <Text fontSize={{ base: "xs", md: "md" }} color="secondary">
-        10
-        <Text>years of experience</Text>
-      </Text>
+    <Badge bg="primary.light" borderRadius={7} p={3} textAlign="center">
+      <Text fontSize="xl">{new Date().getFullYear() - 2013}</Text>
+      <Text>years of experience</Text>
     </Badge>
   );
-
   const rightSection = (
-    <Flex>
-      <Image src={humanImg} maxW={{ base: 200, md: 400 }} />
-      {badgeExperience}
-    </Flex>
+    <Box mt={{ base: 10, md: 0 }}>
+      <Flex justify="flex-end">{badgeExperience}</Flex>
+      <Image src={humanImg} w={400} />
+    </Box>
   );
 
   return (

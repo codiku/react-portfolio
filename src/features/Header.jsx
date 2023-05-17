@@ -18,7 +18,7 @@ export function Header() {
         >
           Hire me
         </Link>
-        <Image pl={20} src={flagEnImg} h={8} cursor="pointer" />
+        <Image pl={20} src={flagEnImg} h={8} />
       </HStack>
     </Flex>
   );
