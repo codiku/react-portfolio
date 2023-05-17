@@ -16,8 +16,10 @@
     "@fontsource/inter": "^4.5.15",
     "@fontsource/poppins": "^4.5.10",
     "framer-motion": "^10.12.11",
+    "i18next": "^22.4.15",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
