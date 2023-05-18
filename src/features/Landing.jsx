@@ -1,8 +1,33 @@
-import { Badge, Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
+import { Badge } from "@/components/Badge";
 import humanImg from "@/assets/images/human.png";
 import { useTranslation } from "react-i18next";
+const SKILLS = [
+  { label: "React" },
+  { label: "Redux" },
+  { label: "Typescript" },
+  { label: "Node.JS" },
+];
 export function Landing() {
   const { t } = useTranslation("home");
+
+  const badgeList = (
+    <Wrap mt={14}>
+      {SKILLS.map((skill) => (
+        <WrapItem key={skill.label}>
+          <Badge bg="primary.dark">{skill.label}</Badge>
+        </WrapItem>
+      ))}
+    </Wrap>
+  );
   const leftSection = (
     <Box>
       <Heading
@@ -22,6 +47,7 @@ export function Landing() {
         </Text>
         <br /> {t("location")}
       </Text>
+      {badgeList}
     </Box>
   );
 
