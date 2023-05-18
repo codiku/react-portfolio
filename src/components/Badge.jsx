@@ -1,18 +1,20 @@
 import { Flex, Heading } from "@chakra-ui/react";
 
-export const Badge = ({ children, bg }) => {
+export function Badge({ bg, children }) {
   return (
     <Flex justify={"center"} alignItems={"center"}>
       <Heading
+        w={130}
+        textAlign="center"
         size={"sm"}
         bg={bg}
         color="white"
         borderRadius={3}
-        padding={"10px 30px 10px 30px"}
-        textAlign="center"
+        px={3}
+        py={3}
       >
         {children}
       </Heading>
     </Flex>
   );
-};
+}
