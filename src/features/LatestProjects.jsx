@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 export function LatestProjects() {
   const [projects, setProjects] = useState();
-  const { t, i18n } = useTranslation("home");
+  const { t } = useTranslation("home");
 
   useEffect(() => {
     (async () => {
@@ -15,7 +15,8 @@ export function LatestProjects() {
       setProjects(projectsResponse);
     })();
   }, []);
-  const renderProject = ({ id, images, title, desc, technologies }) => {
+
+  const renderProject = ({ id, images, title, description, technologies }) => {
     return (
       <WrapItem key={id} flexDir={"column"}>
         <ImageSlider imageList={images.map((img) => img.downloadURL)} />
@@ -30,7 +31,7 @@ export function LatestProjects() {
           />
           {title}
         </Heading>
-        <Text>{desc[i18n.language]}</Text>
+        <Text>{description}</Text>
         <Wrap mt={2} maxW={350}>
           {technologies.map((tech) => (
             <WrapItem key={tech}>
